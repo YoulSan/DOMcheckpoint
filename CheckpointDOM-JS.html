@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title> Site de vente en ligne</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <style>
+     
+        .panier{
+            width: 80px;
+            height: 80px;
+        }
+        input{
+            width: 50px;
+        }
+        .somme{
+            width: 100px;
+        }
+        ul{
+            display: flex;
+            margin: 20px;
+        }
+header{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    background-color: aqua;
+}
+li{
+    margin-right: 100px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <header> <span style="font-size: 35px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">E-Shoping</span>
+    </nav>
+    <ul>
+        <li><a href="">Accueil</a></li>
+        <li><a href="">Articles</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    <a href="#pnr"></a><button style="width: 150px; height: 70px; background-color: white;"><img width="45%" src="data:image/png;base64,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"></button>
+    <nav>
+    </header>
+   <section id="pnr" style="margin-left: 300px; margin-right: 400px; border: 1px solid black;">
+   <table>
+    <tr id="firstline">
+        <td><input type="number" id="prixChau" value="13000"><label>FCFA</label><img class="panier" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aWdrgrEMNRpEIwJScj5QzqylHkmzE3wC9svgNyRKiUTAEu8&s"></td>
+        <td><button onclick="[decrementValue(), prixtotal()]" value="decrement Value">-</button></td>
+        <td><input type="number"  id="qte" value="1" placeholder="1"></td>
+        <td><button onclick="[incrementValue(), prixtotal()]" value="Increment Value" >+</button><button onclick="supchaussure()">supprimer</button>  </td>
+    </tr>
+    <tr id="secondline">
+        <td><input type="number" id="prixpant" value="5000"><label>FCFA</label><img class="panier" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfD3i5HLAYLiv2onvGaNWTfStysNw_5uLpvNxg-49ifpN1UsA&s"></td>
+        <td><button onclick="[decrementValueA2(), prixtotal()]" value="decrement Value" >-</button></td>
+        <td><input type="number" id="qte2" value="1" placeholder="1"></td>
+        <td><button onclick="[incrementValueA2(), prixtotal()]" value="Increment Value">+</button><button onclick="suppant()">supprimer</button></td>   
+    </tr>
+    <tr id="thirdline">
+        <td><input type="number" id="prixvest" value="50000"><label>FCFA</label><img class="panier" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZfxF-OgR0gQWjYcT-gZC12eO9XC1rgtLaS5ljDBJ_xHCIbno&s"></td>
+        <td><button onclick="[decrementValueA3(), prixtotal()]" value="decrement Value" >-</button></td>
+        <td><input type="number" id="qte3" value="1" placeholder="1"></td>
+        <td><button onclick="[incrementValueA3(), prixtotal() ]" value="Increment Value" >+</button><button onclick="supvest()">supprimer</button>  </td>   
+    </tr>
+    <tr id="ffline">
+        <td><input type="number" id="prixpolo" value="4000"><label>FCFA</label><img class="panier" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPGJn30C1LvbTq95gbAK5c5elQkKJBtiZaaC06ZWVty-HaYKGj&s"></td>
+        <td><button onclick="[decrementValueA4(), prixtotal()]" value="decrement Value">-</button></td>
+        <td><input type="number" id="qte4" value="1" placeholder="1"></td>
+        <td><button onclick="[incrementValueA4(), prixtotal()  ]" value="Increment Value4" >+</button><button onclick="suppolo()">supprimer</button> </td> 
+    </tr>
+   </table>
+   <tr>
+    <td></td>
+    <td><span style="font-size: 17px;"><u><b>TOTAL:</b></u></span></td>
+    <td><input id="Pt" class="somme" width="100px" type="number" value="totall"></td>
+</tr>
+<button class="Pdta" onclick="prixtotal()">FCFA</button>
+   </section>
+   <script>
+    let prix1 = 1300;
+    let prix2 = 5000;
+    let prix3 = 50000;
+    let prix4 = 4000;
+    //Fonctions pour ajout
+    
+   function incrementValue()
+{
+    //var ssprix =parseInt(document.getElementById('prixChau').value, 10);
+    var value = parseInt(document.getElementById('qte').value, 10);
+    value = isNaN(value) ? 1 : value;
+    value++;
+    var priun = 13000
+    document.getElementById('qte').value = value;
+    document.getElementById('prixChau').value = 13000*value;
+    prix1 = 13000*value;
+    console.log("prixxx",prix1)
+}
+function incrementValueA2()
+{
+    var value2 = parseInt(document.getElementById('qte2').value, 10);
+    value2 = isNaN(value2) ? 1 : value2;
+    value2++;
+    document.getElementById('qte2').value = value2;
+    document.getElementById('prixpant').value = 5000*value2;
+    prix2 = 5000*value2;
+    console.log("prixxx2",prix2)
+}
+
+function incrementValueA3()
+{
+    var value3 = parseInt(document.getElementById('qte3').value, 10);
+    value3 = isNaN(value3) ? 1 : value3;
+    value3++;
+    document.getElementById('qte3').value = value3;
+    document.getElementById('prixvest').value = 50000*value3;
+    prix3 = 50000*value3;
+    console.log("prixxx3",prix3)
+}
+
+function incrementValueA4()
+{
+    var value4 = parseInt(document.getElementById('qte4').value, 10);
+    value4 = isNaN(value4) ? 1 : value4;
+    value4++;
+    document.getElementById('qte4').value = value4;
+    document.getElementById('prixpolo').value = 4000*value4;
+    prix4 = 4000*value4;
+    console.log("prixxx4",prix4)
+}
+
+//Fonction de decrementation
+function decrementValue()
+{
+    var value = parseInt(document.getElementById('qte').value, 10);
+    value = isNaN(value) ? 1 : value;
+    value--;
+    if(value<1){
+        value=1;
+    }
+    document.getElementById('qte').value = value;
+    document.getElementById('prixChau').value = 13000*value;
+    prix1 = 13000*value;
+    console.log("prixxx",prix1);
+}
+
+function decrementValueA2()
+{
+    var valueA2 = parseInt(document.getElementById('qte2').value, 10);
+    valueA2 = isNaN(valueA2) ? 1 : valueA2;
+    valueA2--;
+    if(valueA2<1){
+        valueA2=1;
+    }
+    document.getElementById('qte2').value = valueA2;
+    document.getElementById('prixpant').value = 5000*valueA2;
+    prix2 = 5000*valueA2;
+    console.log("prixxx2",prix2);
+}
+
+function decrementValueA3()
+{
+    var valueA3 = parseInt(document.getElementById('qte3').value, 10);
+    valueA3 = isNaN(valueA3) ? 1 : valueA3;
+    valueA3--;
+    if(valueA3<1){
+        valueA3=1;
+    }
+    document.getElementById('qte3').value = valueA3;
+    document.getElementById('prixvest').value = 50000*valueA3;
+    prix3 = 50000*valueA3;
+    console.log("prixxx3",prix3)
+}
+
+function decrementValueA4()
+{
+    var valueA4 = parseInt(document.getElementById('qte4').value, 10);
+    valueA4 = isNaN(valueA4) ? 1 : valueA4;
+    valueA4--;
+    if(valueA4<1){
+        valueA4=1;
+    }
+    document.getElementById('qte4').value = valueA4;
+    document.getElementById('prixpolo').value = 4000*valueA4;
+    prix4 = 4000*valueA4;
+    console.log("prixxx4",prix4)
+}
+let totall
+function prixtotal(){
+totall = prix1 + prix2 + prix3 + prix4;
+console.log("ffff", totall)
+
+document.getElementById('Pt').value = totall; //totchau + totpant + totvest + totpolo;// + totpant + totvest + totpolo;
+}
+//suppression des elements
+function supchaussure(){
+    const sUp = document.getElementById('firstline');
+    sUp.remove();
+}
+function suppant(){
+    const sUp = document.getElementById('secondline');
+    sUp.remove();
+}
+function supvest(){
+    const sUp = document.getElementById('thirdline');
+    sUp.remove();
+}
+
+function suppolo(){
+    const sUp = document.getElementById('ffline');
+
+    sUp.remove();
+}
+  </script>
+</body>
+</html>
